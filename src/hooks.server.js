@@ -12,12 +12,14 @@ import { Client } from 'pg'
 		})
 		*/
 
+		/*
 		const client = new Client({
 			connectionString: 'postgresql://localhost/postgres'
 		})
 
 		await client.connect();
 		event.locals.db = client;
+		*/
 
 		const response = await resolve(event);
 		

@@ -12,7 +12,7 @@ CREATE TABLE contact_groups (
 	account_id       UUID, 
 	id               UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	group_name       VARCHAR(255),
-	contact_frequency BIGINT,
+	contact_frequency INTERVAL,
 	color            VARCHAR(255),
 	FOREIGN KEY (account_id) REFERENCES accounts(id)
 );
@@ -24,7 +24,7 @@ CREATE TABLE contacts (
 	id                UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 	first_name        VARCHAR(255),
 	last_name         VARCHAR(255),
-	last_contacted    TIMESTAMP,
+	last_contacted    DATE,
 	active            BOOLEAN DEFAULT true,
 	created_at        TIMESTAMP DEFAULT now(),
 	updated_at        TIMESTAMP DEFAULT now(),

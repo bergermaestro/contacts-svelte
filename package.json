@@ -19,6 +19,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"papaparse": "^5.4.1",
 		"pg": "^8.11.3"
 	}
 }
